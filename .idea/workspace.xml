@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe442f7d-9db6-43bf-9495-73b04b56f135" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Engineer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DatabaseRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Engineer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Engineer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EngineerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EngineerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -29,6 +35,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -45,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Engineer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="1080">
+              <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,11 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/EngineerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="855">
+              <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,14 +97,17 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DatabaseRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/Engineer.java" />
         <option value="$PROJECT_DIR$/src/test/java/EngineerTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="612" />
+    <option name="y" value="24" />
+    <option name="width" value="668" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,6 +147,19 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FO" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="FO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FO" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -149,6 +177,14 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -160,6 +196,117 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Gradle.EngineerTest">
+    <configuration name="EngineerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;EngineerTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EngineerTest.all_returnsAllInstancesOfEngineer_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;EngineerTest.all_returnsAllInstancesOfEngineer_true&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EngineerTest.find_returnsEngineerWithSameId_secondEngineer" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;EngineerTest.find_returnsEngineerWithSameId_secondEngineer&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EngineerTest.save_assignsIdToObject" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;EngineerTest.save_assignsIdToObject&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EngineerTest.save_insertsObjectIntoDatabase_Engineer" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;EngineerTest.save_insertsObjectIntoDatabase_Engineer&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.EngineerTest" />
+        <item itemvalue="Gradle.EngineerTest.find_returnsEngineerWithSameId_secondEngineer" />
+        <item itemvalue="Gradle.EngineerTest.save_assignsIdToObject" />
+        <item itemvalue="Gradle.EngineerTest.all_returnsAllInstancesOfEngineer_true" />
+        <item itemvalue="Gradle.EngineerTest.save_insertsObjectIntoDatabase_Engineer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -174,22 +321,54 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="EngineerTest_all_returnsAllInstancesOfEngineer_true - 2019.05.30 at 20h 35m 05s.xml">
+      <configuration name="EngineerTest.all_returnsAllInstancesOfEngineer_true" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest_all_returnsAllInstancesOfEngineer_true - 2019.05.30 at 20h 35m 36s.xml">
+      <configuration name="EngineerTest.all_returnsAllInstancesOfEngineer_true" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest_save_insertsObjectIntoDatabase_Engineer - 2019.05.30 at 20h 35m 46s.xml">
+      <configuration name="EngineerTest.save_insertsObjectIntoDatabase_Engineer" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest_all_returnsAllInstancesOfEngineer_true - 2019.05.30 at 20h 35m 51s.xml">
+      <configuration name="EngineerTest.all_returnsAllInstancesOfEngineer_true" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest_all_returnsAllInstancesOfEngineer_true - 2019.05.30 at 20h 36m 30s.xml">
+      <configuration name="EngineerTest.all_returnsAllInstancesOfEngineer_true" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest_save_assignsIdToObject - 2019.05.30 at 20h 37m 13s.xml">
+      <configuration name="EngineerTest.save_assignsIdToObject" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest_find_returnsEngineerWithSameId_secondEngineer - 2019.05.30 at 20h 37m 24s.xml">
+      <configuration name="EngineerTest.find_returnsEngineerWithSameId_secondEngineer" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest - 2019.05.30 at 20h 37m 42s.xml">
+      <configuration name="EngineerTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest - 2019.05.30 at 20h 37m 57s.xml">
+      <configuration name="EngineerTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="EngineerTest - 2019.05.30 at 20h 39m 21s.xml">
+      <configuration name="EngineerTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="612" y="24" width="668" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08966074" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0686901" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.2780822" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32901135" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Build" weight="0.32901135" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32901135" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -236,10 +415,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Engineer.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/DatabaseRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="6" column="84" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -248,8 +427,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/EngineerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="855">
+          <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Engineer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

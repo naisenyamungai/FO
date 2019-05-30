@@ -27,6 +27,7 @@ public class Engineer  {
         return id;
     }
 
+
     @Override
     public boolean equals(Object otherEngineer) {
         if (!(otherEngineer instanceof Engineer)) {
@@ -37,6 +38,8 @@ public class Engineer  {
                     this.getStaff().equals(newEngineer.getStaff());
         }
     }
+
+
     public void save() {
         try (Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO engineers (name, staff) VALUES (:name, :staff)";

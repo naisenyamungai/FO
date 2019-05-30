@@ -1,4 +1,6 @@
 import org.sql2o.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Site{
     private String name;
@@ -35,7 +37,7 @@ public class Site{
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO sitess (name, personid) VALUES (:name, :personId)";
+            String sql = "INSERT INTO sites (name, personid) VALUES (:name, :personId)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("personId", this.personId)
@@ -43,6 +45,24 @@ public class Site{
                     .getKey();
         }
     }
+
+   public static List<Site> all() {
+        String sql = "SELECT * FROM sites";
+        try(Connection con = DB.sql2o.open()) {
+           return con.createQuery(sql).executeAndFetch(Site.class);
+        }
+    }
+
+
+    public static Site find(int id) {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sites where id=:id";
+            Site site = con.createQuery(sql)
+                .addParameter("id", id)
+                .executeAndFetchFirst(Site.class);
+            return site;
+         }
+      }
 
 
 }

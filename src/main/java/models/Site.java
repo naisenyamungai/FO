@@ -1,5 +1,7 @@
+package models;
+
 import org.sql2o.*;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class Site{
@@ -35,6 +37,8 @@ public class Site{
         }
     }
 
+
+
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO sites (name, personid) VALUES (:name, :personId)";
@@ -63,6 +67,16 @@ public class Site{
             return site;
          }
       }
+
+
+      public void delete() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "DELETE FROM sites WHERE id = :id;";
+            con.createQuery(sql)
+                    .addParameter("id", this.id)
+                    .executeUpdate();
+        }
+    }
 
 
 }

@@ -1,7 +1,6 @@
+import models.Engineer;
 import org.junit.*;
 import static org.junit.Assert.*;
-import java.util.Arrays;
-import java.util.List;
 
 public class EngineerTest {
     @Rule
@@ -47,23 +46,23 @@ public class EngineerTest {
         assertTrue(Engineer.all().get(0).equals(testEngineer));
     }
 
-//    @Test
-//    public void all_returnsAllInstancesOfEngineer_true() {
-//        Engineer firstEngineer = new Engineer("Henry", "EK6487");
-//        firstEngineer.save();
-//        Engineer secondEngineer = new Engineer("Kerry", "EK6688");
-//        secondEngineer.save();
-//        assertEquals(true, Engineer.all().get(0).equals(firstEngineer));
-//        assertEquals(true, Engineer.all().get(1).equals(secondEngineer));
-//    }
-//
-//    @Test
-//    public void save_assignsIdToObject() {
-//        Engineer testEngineer = new Engineer("Henry", "EK6487");
-//        testEngineer.save();
-//        Engineer savedEngineer = Engineer.all().get(0);
-//        assertEquals(testEngineer.getId(), savedEngineer.getId());
-//    }
+    @Test
+    public void all_returnsAllInstancesOfEngineer_true() {
+        Engineer firstEngineer = new Engineer("Henry", "EK6487");
+        firstEngineer.save();
+        Engineer secondEngineer = new Engineer("Kerry", "EK6688");
+        secondEngineer.save();
+        assertEquals(true, Engineer.all().get(0).equals(firstEngineer));
+        assertEquals(true, Engineer.all().get(1).equals(secondEngineer));
+    }
+
+    @Test
+    public void save_assignsIdToObject() {
+        Engineer testEngineer = new Engineer("Henry", "EK6487");
+        testEngineer.save();
+        Engineer savedEngineer = Engineer.all().get(0);
+        assertEquals(testEngineer.getId(), savedEngineer.getId());
+    }
 
     @Test
     public void find_returnsEngineerWithSameId_secondEngineer() {

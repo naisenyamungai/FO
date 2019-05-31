@@ -1,11 +1,12 @@
+package models;
+
 import org.sql2o.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 
-public class Engineer  {
+public class Engineer{
     private String name;
     private String staff;
     private int id;
@@ -67,4 +68,24 @@ public class Engineer  {
             return engineer;
         }
     }
+
+    public List<Site> getSites() {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sites WHERE personId=:id";
+            return con.createQuery(sql)
+                    .addParameter("id", this.id)
+                    .executeAndFetch(Site.class);
+        }
+    }
+
+
+    public void delete() {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "DELETE FROM engineers WHERE id = :id;";
+            con.createQuery(sql)
+                    .addParameter("id", this.id)
+                    .executeUpdate();
+        }
+    }
+
 }

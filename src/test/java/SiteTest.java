@@ -1,4 +1,4 @@
-import org.sql2o.*;
+import models.Site;
 import org.junit.*;
 import org.junit.After;
 import org.junit.Before;
@@ -50,13 +50,13 @@ public class SiteTest {
     assertTrue(Site.all().get(0).equals(testSite));
     }
 
-//    @Test
-//    public void save_assignsIdToSite() {
-//        Site testSite = new Site("Mililu", 1);
-//        testSite.save();
-//        Site savedSite = Site.all().get(0);
-//        assertEquals(savedSite.getId(), testSite.getId());
-//    }
+    @Test
+    public void save_assignsIdToSite() {
+        Site testSite = new Site("Mililu", 1);
+        testSite.save();
+        Site savedSite = Site.all().get(0);
+        assertEquals(savedSite.getId(), testSite.getId());
+    }
 
     @Test
     public void find_returnsSiteWithSameId_secondSite() {
@@ -66,6 +66,16 @@ public class SiteTest {
         secondSite.save();
         assertEquals(Site.find(secondSite.getId()), secondSite);
     }
+
+//    @Test
+//    public void save_savesEngineerIdIntoDB_true() {
+//        models.Engineer testEngineer = new models.Engineer("Henry", "EK6487");
+//        testEngineer.save();
+//        models.Site testSite = new models.Site("Mililu", testEngineer.getId());
+//        testSite.save();
+//        models.Site savedSite = models.Site.find(testSite.getId());
+//        assertEquals(savedSite.getEngineerId(), testEngineer.getId());
+//    }
 
 
 }

@@ -16,6 +16,19 @@ public class Engineer{
         this.staff = staff;
     }
 
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setStaff(String Staff){
+        this.staff = staff;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -39,53 +52,53 @@ public class Engineer{
                     this.getStaff().equals(newEngineer.getStaff());
         }
     }
-
-
-    public void save() {
-        try (Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO engineers (name, staff) VALUES (:name, :staff)";
-            this.id = (int) con.createQuery(sql, true)
-                    .addParameter("name", this.name)
-                    .addParameter("staff", this.staff)
-                    .executeUpdate()
-                    .getKey();
-        }
-    }
-
-    public static List<Engineer> all() {
-        String sql = "SELECT * FROM engineers";
-        try (Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql).executeAndFetch(Engineer.class);
-        }
-    }
-
-    public static Engineer find(int id) {
-        try (Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM engineers where id=:id";
-            Engineer engineer = con.createQuery(sql)
-                    .addParameter("id", id)
-                    .executeAndFetchFirst(Engineer.class);
-            return engineer;
-        }
-    }
-
-    public List<Site> getSites() {
-        try (Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM sites WHERE personId=:id";
-            return con.createQuery(sql)
-                    .addParameter("id", this.id)
-                    .executeAndFetch(Site.class);
-        }
-    }
-
-
-    public void delete() {
-        try (Connection con = DB.sql2o.open()) {
-            String sql = "DELETE FROM engineers WHERE id = :id;";
-            con.createQuery(sql)
-                    .addParameter("id", this.id)
-                    .executeUpdate();
-        }
-    }
+//
+//
+//    public void save() {
+//        try (Connection con = DB.sql2o.open()) {
+//            String sql = "INSERT INTO engineers (name, staff) VALUES (:name, :staff)";
+//            this.id = (int) con.createQuery(sql, true)
+//                    .addParameter("name", this.name)
+//                    .addParameter("staff", this.staff)
+//                    .executeUpdate()
+//                    .getKey();
+//        }
+//    }
+//
+//    public static List<Engineer> all() {
+//        String sql = "SELECT * FROM engineers";
+//        try (Connection con = DB.sql2o.open()) {
+//            return con.createQuery(sql).executeAndFetch(Engineer.class);
+//        }
+//    }
+//
+//    public static Engineer find(int id) {
+//        try (Connection con = DB.sql2o.open()) {
+//            String sql = "SELECT * FROM engineers where id=:id";
+//            Engineer engineer = con.createQuery(sql)
+//                    .addParameter("id", id)
+//                    .executeAndFetchFirst(Engineer.class);
+//            return engineer;
+//        }
+//    }
+//
+//    public List<Site> getSites() {
+//        try (Connection con = DB.sql2o.open()) {
+//            String sql = "SELECT * FROM sites WHERE personId=:id";
+//            return con.createQuery(sql)
+//                    .addParameter("id", this.id)
+//                    .executeAndFetch(Site.class);
+//        }
+//    }
+//
+//
+//    public void delete() {
+//        try (Connection con = DB.sql2o.open()) {
+//            String sql = "DELETE FROM engineers WHERE id = :id;";
+//            con.createQuery(sql)
+//                    .addParameter("id", this.id)
+//                    .executeUpdate();
+//        }
+//    }
 
 }

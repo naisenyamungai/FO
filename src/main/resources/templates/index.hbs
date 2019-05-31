@@ -1,0 +1,15 @@
+{{#partial "content"}}
+
+    <h1> Add Engineers</h1>
+
+    {{#if engineers}}
+        {{#each engineers }}
+            <p>Current Engineer:</p>
+            <p>{{ name }} <a href="/engineers/{{id}}">read more...</a></p>
+        {{/each}}
+    {{else}}
+        <p>No engineers!</p>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

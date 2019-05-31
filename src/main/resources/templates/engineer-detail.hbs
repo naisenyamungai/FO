@@ -1,0 +1,15 @@
+{{#partial "content"}}
+
+    <p>Name:</p>
+
+    <p>{{ engineer.name }}</p>
+    <p>{{ engineer.staff}}</p>
+
+
+        <a href="/engineers/{{engineer.id}}/update">Edit this Engineer</a><br>
+        <a href="/engineers/{{engineer.id}}/delete">DELETE this Engineer (no undo)</a>
+    </p>
+
+{{/partial}}
+
+{{> layout.hbs}}

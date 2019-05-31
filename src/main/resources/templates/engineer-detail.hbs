@@ -1,14 +1,31 @@
 {{#partial "content"}}
 
-    <p>Name:</p>
+    <table>
+        <tr>
+            <th>FIRST NAME</th>
+            <th>MIDDLE NAME</th>
+            <th>LAST NAME</th>
+            <th>EK NUMBER</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td>{{ engineer.name }}</td>
+            <td>Last Name</td>
+            <td>{{ engineer.staff}}</td>
+            <td id="edit"><a href="/engineers/{{engineer.id}}/update"><p>Edit...</p></a></td>
+            <td id="delete"><a href="/engineers/{{engineer.id}}/delete"><p>Delete...</p></a></td>
+        </tr>
+    </table>
 
-    <p>{{ engineer.name }}</p>
-    <p>{{ engineer.staff}}</p>
+<!--    <p>{{ engineer.name }}</p>-->
+<!--    <p>{{ engineer.staff}}</p>-->
 
 
-        <a href="/engineers/{{engineer.id}}/update">Edit this Engineer</a><br>
-        <a href="/engineers/{{engineer.id}}/delete">DELETE this Engineer (no undo)</a>
-    </p>
+<!--        <a href="/engineers/{{engineer.id}}/update">Edit this Engineer</a>-->
+<!--        <a href="/engineers/{{engineer.id}}/delete">DELETE this Engineer (no undo)</a>-->
+<!--    </p>-->
 
 {{/partial}}
 

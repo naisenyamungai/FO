@@ -1,15 +1,25 @@
 {{#partial "content"}}
+    <h2>Site Maintenance Engineer - Nairobi East</h2>
 
-    <h1> Add Engineers</h1>
+                {{#if engineers}}
 
-    {{#if engineers}}
-        {{#each engineers }}
-            <p>Current Engineer:</p>
-            <p>{{ name }} <a href="/engineers/{{id}}">read more...</a></p>
-        {{/each}}
-    {{else}}
-        <p>No engineers!</p>
-    {{/if}}
+                    {{#each engineers }}
+                        <div class="engineerDisplay">
+                                <table>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                    <tr>
+                                        <td>{{name}}</td>
+                                        <td><p><a href="/engineers/{{id}}"> View details</a></p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    {{/each}}
+                {{else}}
+                    <p>No engineers!</p>
+                {{/if}}
 {{/partial}}
 
 {{> layout.hbs}}

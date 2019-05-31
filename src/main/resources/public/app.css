@@ -1,0 +1,76 @@
+body{
+background-color:rgba(32, 24, 33 0.5);
+color:rgb(32, 24, 33);
+font-family: 'Lusitana', serif;
+
+}
+
+#navigationbar{
+background-color:rgb(32, 24, 33);
+height:100px;
+color:white;
+
+}
+
+.everything{
+margin-top:150px;
+}
+
+.welcome{
+margin-top:150px;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Lusitana', serif;
+}
+
+td{
+font-size:18px;
+}
+
+th{
+font-size:14px;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+#delete p{
+color:red;
+}
+
+#edit p{
+color:black;
+}
+
+
+.engineerDisplay table{
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Lusitana', serif;
+  font-size:18px;
+  color:rgb(32, 24, 33);
+}
+
+.engineerDisplay td{
+font-size:18px;
+}
+
+.engineerDisplay th{
+height:0.5px;
+}
+
+.engineerDisplay td, th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+

@@ -2,18 +2,20 @@
 
     <table>
         <tr>
+            <th>EK NUMBER</th>
             <th>FIRST NAME</th>
             <th>MIDDLE NAME</th>
             <th>LAST NAME</th>
-            <th>EK NUMBER</th>
+            <th>STATUS</th>
             <th>EDIT</th>
             <th>DELETE</th>
         </tr>
         <tr>
-            <td>First Name</td>
-            <td>{{ engineer.name }}</td>
-            <td>Last Name</td>
             <td>{{ engineer.staff}}</td>
+            <td>{{ engineer.first_name}}</td>
+            <td>{{ engineer.name }}</td>
+            <td>{{ engineer.last_name}}</td>
+            <td>{{ engineer.status}}</td>
             <td id="edit"><a href="/engineers/{{engineer.id}}/update"><p>Edit...</p></a></td>
             <td id="delete"><a href="/engineers/{{engineer.id}}/delete"><p>Delete...</p></a></td>
         </tr>

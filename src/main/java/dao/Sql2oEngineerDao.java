@@ -12,7 +12,7 @@ public class Sql2oEngineerDao implements EngineerDao{
 
     @Override
     public void add(Engineer engineer) {
-        String sql = "INSERT INTO engineers (name, staff) VALUES (:name, :staff)"; //raw sql
+        String sql = "INSERT INTO engineers (name, staff, first_name, last_name, status) VALUES (:name, :staff, :first_name, :last_name, :status)"; //raw sql
         try(Connection con = sql2o.open()){ //try to open a connection
             int id = (int) con.createQuery(sql, true) //make a new variable
                     .bind(engineer) //map my argument onto the query so we can use information from it
@@ -42,7 +42,7 @@ public class Sql2oEngineerDao implements EngineerDao{
     }
 
     @Override
-    public void update(int id, String newName){
+    public void update(int id, String newName, String status){
         String sql = "UPDATE engineers SET name = :name WHERE id=:id";
         try(Connection con = sql2o.open()){
             con.createQuery(sql)

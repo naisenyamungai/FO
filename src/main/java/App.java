@@ -98,12 +98,12 @@ public class App{
         post("/engineers/:id", (req, res) -> { //URL to update task on POST route
             Map<String, Object> model = new HashMap<>();
             String newEngineer = req.queryParams("name");
+            String status= req.queryParams("status");
             int idOfEngineerToEdit = Integer.parseInt(req.params("id"));
-            engineerDao.update(idOfEngineerToEdit, newEngineer);
+            engineerDao.update(idOfEngineerToEdit, newEngineer, status);
             res.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
-
 
     }
 }

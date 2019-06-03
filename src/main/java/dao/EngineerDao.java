@@ -10,7 +10,7 @@ public interface EngineerDao {
 
     Engineer findById(int id);
 
-    void update(int id, String name);
+    void update(int id, String name, String status);
 
     void deleteById(int id);
 

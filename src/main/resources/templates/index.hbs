@@ -1,25 +1,45 @@
-{{#partial "content"}}
-    <h2>Site Maintenance Engineer - Nairobi East</h2>
+    {{#partial "content"}}
+        <h2>Site Maintenance Engineers</h2>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p> REGION: NAIROBI EAST </p>
+            </div>
 
-                {{#if engineers}}
+        <div class="panel-body">
 
-                    {{#each engineers }}
-                        <div class="engineerDisplay">
-                                <table>
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                    <tr>
-                                        <td>{{name}}</td>
-                                        <td><p><a href="/engineers/{{id}}"> View details</a></p></td>
-                                    </tr>
-                                </table>
-                            </div>
-                    {{/each}}
-                {{else}}
-                    <p>No engineers!</p>
-                {{/if}}
+            <table id="indexDetails">
+             <thead>
+                <tr>
+<!--                    <th scope="col">No.</th>-->
+                    <th scope="col">Work Status</th>
+                    <th scope="col">Middle Name</th>
+                    <th scope="col">Other Details</th>
+                </tr>
+             </thead>
+             {{#if engineers}}
+               {{#each engineers }}
+                 <tbody>
+                       <tr>
+<!--                           <td></td>-->
+                           <th scope="row" >{{status}}</th>
+                           <td>{{name}}</td>
+                           <td><p><a href="/engineers/{{id}}"> View details</a></p></td>
+                       </tr>
+                  </tbody>
+
+                {{/each}}
+            {{else}}
+                <p>No engineers!</p>
+            {{/if}}
+            </table>
+        </div>
+
+        <div class="panel-footer">
+            <p>Add engineer!<a href="/engineers/new">Here</a></p>
+        </div>
+    </div>
+
 {{/partial}}
 
 {{> layout.hbs}}
+

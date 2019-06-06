@@ -1,33 +1,69 @@
 {{#partial "content"}}
 
-    <table>
-        <tr>
-            <th>EK NUMBER</th>
-            <th>FIRST NAME</th>
-            <th>MIDDLE NAME</th>
-            <th>LAST NAME</th>
-            <th>STATUS</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
-        </tr>
-        <tr>
-            <td>{{ engineer.staff}}</td>
-            <td>{{ engineer.first_name}}</td>
-            <td>{{ engineer.name }}</td>
-            <td>{{ engineer.last_name}}</td>
-            <td>{{ engineer.status}}</td>
-            <td id="edit"><a href="/engineers/{{engineer.id}}/update"><p>Edit...</p></a></td>
-            <td id="delete"><a href="/engineers/{{engineer.id}}/delete"><p>Delete...</p></a></td>
-        </tr>
+    <table class="tableDetails">
+        <thead>
+            <tr>
+                <th scope="col">FIRST NAME</th>
+                <th scope="col">MIDDLE NAME</th>
+                <th scope="col">LAST NAME</th>
+                <th scope="col">STATUS</th>
+                <th scope="col">EDIT</th>
+                <th scope="col">DELETE</th>
+            </tr>
+        </thead>
+
+                <tbody>
+                <tr>
+
+                    <td scope="row" ><p>{{ engineer.first_name}}</p></td>
+                    <td><p>{{ engineer.name }}</p></td>
+                    <td><p>{{ engineer.last_name}}</p></td>
+                    <td><p>{{ engineer.status}}</p></td>
+                    <td id="edit"><a href="/engineers/{{engineer.id}}/update"><p>Edit...</p></a></td>
+                    <td id="delete"><a href="/engineers/{{engineer.id}}/delete"><p>Delete...</p></a></td>
+                </tr>
+                </tbody>
+
     </table>
 
-<!--    <p>{{ engineer.name }}</p>-->
-<!--    <p>{{ engineer.staff}}</p>-->
 
+<!--    <h2>List of Sites under Engineer</h2>-->
+<!--    <div class="panel panel-default">-->
+<!--        <div class="panel-heading">-->
+<!--            <p>Sites</p>-->
+<!--        </div>-->
 
-<!--        <a href="/engineers/{{engineer.id}}/update">Edit this Engineer</a>-->
-<!--        <a href="/engineers/{{engineer.id}}/delete">DELETE this Engineer (no undo)</a>-->
-<!--    </p>-->
+<!--        <div class="panel-body">-->
+
+<!--            <table id="siteScope">-->
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                    <th scope="col">SITE STATUS</th>-->
+<!--                    <th scope="col">SITE NAME</th>-->
+<!--                    <th scope="col">DETAILS</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                {{#if sites}}-->
+<!--                    {{#each sites }}-->
+<!--                        <tbody>-->
+<!--                        <tr>-->
+<!--                            <th scope="row">{{status}}</th>-->
+<!--                            <td>{{site_name}}</td>-->
+<!--                            <td><p><a href="/sites/{{id}}"> View details</a></p></td>-->
+<!--                        </tr>-->
+<!--                        </tbody>-->
+
+<!--                    {{/each}}-->
+<!--                {{else}}-->
+<!--                    <p>No sites</p>-->
+<!--                {{/if}}-->
+<!--            </table>-->
+<!--        </div>-->
+
+<!--        <div class="panel-footer">-->
+<!--            <p>No sites yet, kindly add sites for this engineer!<a href="/sites/new">Here</a></p>-->
+<!--        </div>-->
+<!--    </div>-->
 
 {{/partial}}
 

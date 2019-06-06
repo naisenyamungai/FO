@@ -1,5 +1,7 @@
 package dao;
+import models.DB;
 import models.Engineer;
+import models.Site;
 import org.sql2o.*;
 import java.util.List;
 
@@ -75,6 +77,15 @@ public class Sql2oEngineerDao implements EngineerDao{
                     .executeUpdate();
         } catch (Sql2oException ex){
             System.out.println(ex);
+        }
+    }
+
+    @Override
+    public List<Site> getAllSitesByEngineer(int engineerId) {
+        try(Connection con = sql2o.open()){
+            return con.createQuery("SELECT * FROM sites WHERE engineerId = :engineerId")
+                    .addParameter("engineerId", engineerId)
+                    .executeAndFetch(Site.class);
         }
     }
 

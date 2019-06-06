@@ -5,90 +5,100 @@ import org.sql2o.*;
 import java.util.List;
 
 public class Site{
-    private String name;
-    private int personId;
+    private String site_name;
+    private String node_name;
+    private String site_id;
+    private String technology;
+    private String status;
+    private int engineerId;
+    private String staff;
     private int id;
 
-    public Site(String name, int personId) {
-        this.name = name;
-        this.personId = personId;
+    public Site(String node_name, String site_id, String site_name,  String technology, String status, int engineerId) {
+        this.site_name = site_name;
+        this.staff = staff;
+        this.node_name = node_name;
+        this.site_id = site_id;
+        this.technology = technology;
+        this.status = status;
+        this.engineerId = engineerId;
+        this.id = id;
    }
 
    public void setId(int id){
-       this.id = id;
+        this.id = id;
    }
 
-   public void setName(String name){
-        this.name = name;
+   public void setSite_name(String site_name){
+        this.site_name = site_name;
    }
 
-   public void setPersonId(int personId){
-        this.personId = personId;
+   public void setStaff(String staff){
+        this.staff = staff;
    }
 
-    public String getName(){
-        return name;
+   public void setNode_name(String node_name){
+        this.node_name = node_name;
     }
 
-    public int getPersonId(){
-        return personId;
+   public void setSite_id(String site_id){
+        this.site_id = site_id;
+    }
+
+   public void setTechnology(String technology){
+        this.technology = technology;
+    }
+
+   public void setStatus(String status){
+        this.status = status;
+    }
+
+    public void setEngineerId(int engineerId){
+        this.engineerId = engineerId;
+    }
+
+
+    public String getSite_name(){
+        return site_name;
+    }
+
+    public String getStaff(){
+        return staff;
     }
 
     public int getId(){
         return id;
     }
-//
-//    @Override
-//    public boolean equals(Object otherSite){
-//        if (!(otherSite instanceof Site)) {
-//            return false;
-//        } else {
-//            Site newSite = (Site) otherSite;
-//            return this.getName().equals(newSite.getName()) &&
-//                    this.getPersonId() == newSite.getPersonId();
-//        }
-//    }
-//
-//
-//
-//    public void save() {
-//        try(Connection con = DB.sql2o.open()) {
-//            String sql = "INSERT INTO sites (name, personid) VALUES (:name, :personId)";
-//            this.id = (int) con.createQuery(sql, true)
-//                    .addParameter("name", this.name)
-//                    .addParameter("personId", this.personId)
-//                    .executeUpdate()
-//                    .getKey();
-//        }
-//    }
-//
-//   public static List<Site> all() {
-//        String sql = "SELECT * FROM sites";
-//        try(Connection con = DB.sql2o.open()) {
-//           return con.createQuery(sql).executeAndFetch(Site.class);
-//        }
-//    }
-//
-//
-//    public static Site find(int id) {
-//        try(Connection con = DB.sql2o.open()) {
-//            String sql = "SELECT * FROM sites where id=:id";
-//            Site site = con.createQuery(sql)
-//                .addParameter("id", id)
-//                .executeAndFetchFirst(Site.class);
-//            return site;
-//         }
-//      }
-//
-//
-//      public void delete() {
-//        try(Connection con = DB.sql2o.open()) {
-//            String sql = "DELETE FROM sites WHERE id = :id;";
-//            con.createQuery(sql)
-//                    .addParameter("id", this.id)
-//                    .executeUpdate();
-//        }
-//    }
 
+    public String getNode_name(){
+        return node_name;
+    }
+
+    public String getSite_id(){
+        return site_id;
+    }
+
+    public String getTechnology(){
+        return technology;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+
+    public int getEngineerId(){
+        return engineerId;
+    }
+
+    @Override
+    public boolean equals(Object otherSite){
+        if (!(otherSite instanceof Site)) {
+            return false;
+        } else {
+            Site newSite = (Site) otherSite;
+            return this.getSite_name().equals(newSite.getSite_name()) &&
+                    this.getEngineerId() == newSite.getEngineerId();
+        }
+    }
 
 }

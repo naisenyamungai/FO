@@ -1,0 +1,44 @@
+{{#partial "content"}}
+    <h2>Sites - Nairobi East</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <p>Sites - Nairobi East</p>
+        </div>
+
+        <div class="panel-body">
+
+            <table id="siteScope">
+                <thead>
+                <tr>
+<!--                    <th scope="col">No.</th>-->
+                    <th scope="col">SITE STATUS</th>
+                    <th scope="col">SITE NAME</th>
+                    <th scope="col">DETAILS</th>
+                </tr>
+                </thead>
+                {{#if sites}}
+                    {{#each sites }}
+                        <tbody>
+                        <tr>
+<!--                            <td></td>-->
+                            <th scope="row">{{status}}</th>
+                            <td>{{site_name}}</td>
+                            <td><p><a href="/sites/{{id}}"> View details</a></p></td>
+                        </tr>
+                        </tbody>
+
+                    {{/each}}
+                {{else}}
+                    <p>No sites</p>
+                {{/if}}
+            </table>
+        </div>
+
+        <div class="panel-footer">
+            <p>Add engineer!<a href="/engineers/new">Here</a></p>
+            <p class="text-muted"><a href="/sites/delete">DELETE ALL Sites</a></p>
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

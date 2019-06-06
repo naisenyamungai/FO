@@ -1,38 +1,89 @@
 body{
-background-color:rgba(32, 24, 33 0.5);
-color:rgb(32, 24, 33);
+color:white;
 font-family: 'Lusitana', serif;
+height:100%;
+width:100%;
 
 }
 
 #navigationbar{
-background-color:rgb(32, 24, 33);
-height:100px;
+background-color:rgb(57, 181, 74);
+height:120px;
+border-style:none;
+border-color:rgb(57, 181, 74);
+}
+
+nav p{
 color:white;
+font-size:30px;
+padding-top:35px;
+}
+
+.collapse navbar-collapse{
+padding-right:0px;
+padding-bottom:0px;
+}
+
+
+#myNavbar ul{
+margin-left:200px;
 
 }
 
-.everything{
-margin-top:150px;
+.navbar-toggle{
+color:white;
 }
 
 .welcome{
-margin-top:150px;
+background-image: url(images/Fibre.jpeg);
+background-size: cover;
+background-repeat: none;
+background-position: center;
+padding:0px;
+  color: white;
+  width:100%;
+  height: 100vh;
+  border-radius: 0px;
 }
+
+.welcome h1{
+text-align:center;
+padding-top:60px;
+}
+
+.welcome h2{
+text-align:center;
+padding-top:3px;
+}
+
+.everything{
+background-color:white;
+color:black;
+}
+
+.col-md-12{
+padding-right:0px;
+padding-left:0px;
+padding-top:0px;
+
+}
+
 
 table{
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   font-family: 'Lusitana', serif;
+  margin-left:10%;
 }
 
 td{
-font-size:18px;
+font-size:16px;
+color:black;
 }
 
 th{
-font-size:14px;
-
+font-size:18px;
+color:black;
 }
 
 td, th {
@@ -47,30 +98,52 @@ color:red;
 }
 
 #edit p{
-color:black;
+color:yellow;
 }
 
 
 .engineerDisplay table{
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   font-family: 'Lusitana', serif;
   font-size:18px;
-  color:rgb(32, 24, 33);
+  color:white;
+  margin-left:10%;
 }
 
 .engineerDisplay td{
-font-size:18px;
+font-size:16px;
+
+.panel-footer p{
+color:rgb(10, 18, 40);
 }
 
-.engineerDisplay th{
-height:0.5px;
+#siteScope td th{
+color:rgb(10, 18, 40);
 }
+
 
 .engineerDisplay td, th{
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
+
+
+#indexDetails td, th{
+color:rgb(10, 18, 40);
+}
+
+.formDetails{
+ width: 80%;
+ margin-left:20%;
+}
+
+table .tableDetails{
+width:100%;
+margin-left:0%;
+}
+
+
 
 

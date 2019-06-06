@@ -1,0 +1,34 @@
+{{#partial "content"}}
+    <table class="tableDetails">
+        <thead>
+        <tr>
+            <th scope="col">NODE NAME</th>
+            <th scope="col">SITE ID</th>
+            <th scope="col">SITE NAME</th>
+            <th scope="col">TECHNOLOGY</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">EDIT</th>
+            <th scope="col">DELETE</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+
+            <td scope="row" ><p>{{site.node_name}}</p></td>
+            <td><p>{{ site.site_id }}</p></td>
+            <td><p>{{ site.site_name }}</p></td>
+            <td><p>{{ site.technology }}</p></td>
+            <td><p>{{ site.status }}</p></td>
+            <td id="edit"><a href="/sites/{{site.id}}/update"><p>Edit...</p></a></td>
+            <td id="delete"><a href="/sites/{{site.id}}/delete"><p>Delete...</p></a></td>
+        </tr>
+        </tbody>
+
+    </table>
+
+
+
+{{/partial}}
+
+{{> layout.hbs}}

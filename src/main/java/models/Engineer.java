@@ -1,9 +1,9 @@
 package models;
 
 import org.sql2o.*;
-
 import java.util.List;
-
+import java.util.Objects;
+import java.util.ArrayList;
 
 
 public class Engineer{
@@ -13,10 +13,15 @@ public class Engineer{
     private String last_name;
     private String status;
     private int id;
+    private ArrayList<Site> sites;
 
-    public Engineer(String name, String staff) {
+
+    public Engineer(String staff, String first_name, String name, String last_name, String status) {
         this.name = name;
         this.staff = staff;
+        this.status = status;
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
 
 
@@ -57,15 +62,34 @@ public class Engineer{
     public String getStatus(){ return status;}
 
 
+//    @Override
+//    public boolean equals(Object otherEngineer) {
+//        if (!(otherEngineer instanceof Engineer)) {
+//            return false;
+//        } else {
+//            Engineer newEngineer = (Engineer) otherEngineer;
+//            return this.getName().equals(newEngineer.getName()) &&
+//                    this.getStaff().equals(newEngineer.getStaff());
+//        }
+//    }
+
     @Override
-    public boolean equals(Object otherEngineer) {
-        if (!(otherEngineer instanceof Engineer)) {
-            return false;
-        } else {
-            Engineer newEngineer = (Engineer) otherEngineer;
-            return this.getName().equals(newEngineer.getName()) &&
-                    this.getStaff().equals(newEngineer.getStaff());
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Engineer engineer = (Engineer) o;
+        return getId() == engineer.getId() &&
+                Objects.equals(getName(), engineer.getName()) &&
+                Objects.equals(getStaff(), engineer.getStaff()) &&
+                Objects.equals(getStatus(), engineer.getStatus()) &&
+                Objects.equals(getFirst_name(), engineer.getFirst_name()) &&
+                Objects.equals(getLast_name(), engineer.getLast_name()) &&
+                Objects.equals(sites, engineer.sites);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getId(), getStaff(), getStatus(), getFirst_name(), getLast_name(), sites);
     }
 //
 //

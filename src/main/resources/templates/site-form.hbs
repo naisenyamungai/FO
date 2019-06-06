@@ -1,0 +1,68 @@
+{{#partial "content"}}
+
+    {{#if editSite}}
+        <div class="formDetails">
+            <h1>Edit this details!</h1>
+            <form class="form" action="/sites/{{editSite.id}}" method="post">
+                <div class="form-group">
+                    <label for="site_name">Edit Site's name</label>
+                    <input id="site_name" name="site_name" type="text" value="{{editSite.site_name}}">
+                </div>
+                <div class="form-group">
+                    <label for="status">Edit Site Status On Air, Decommissioned or Planned</label>
+                    <input id="status" name="status" class="form-control" type="text" value="{{editSite.status}}">
+                </div>
+            </form>
+
+        {{else}}
+            <h1>Add a new Site!</h1>
+
+            <form action="/sites" method="post">
+                {{#if engineers}}
+                <div class="form-group">
+                    <label for="node_name">Enter Site's BSC or RNC</label>
+                    <input id="node_name" name="node_name" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="site_id">Site ID</label>
+                    <input id="site_id" name="site_id" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="site_name">Site Name</label>
+                    <input id="site_name" name="site_name" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="technology">Technology</label>
+                    <input id="technology" name="technology" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Edit Site Status On Air, Decommissioned or Planned</label>
+                    <input id="status" name="status" class="form-control" type="text">
+                </div>
+
+                <br>
+
+                    <label for="engineerId">Engineer for this site</label>
+                    <select id="engineerId" name="engineerId">
+                            {{#each engineers}}
+                                <option value="{{id}}">{{name}}</option>
+                            {{/each}}
+                    </select>
+                <br>
+
+                <p>Don't see the right engineer?</p>
+
+               {{else}}
+                   <h3><a href="/engineers/new">Add an engineer here...</a></h3>
+              {{/if}}
+              <button type="submit" class="btn btn-default">Go!</button>
+          </form>
+        </div>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

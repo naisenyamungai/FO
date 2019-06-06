@@ -10,16 +10,14 @@
 > An app for a Site Maintenance Manager. The Site Maintenance Manager should be able to add a list of the maintenance engineers, and for each engineer, add the sites that the engineer maintains.
 
 ## Project Overview
->-As a Manager, I need to be able to see a list of all our engineers.
->-As a Manager, I need to be able to select an engineer, see their details, and see a list of all the sites that they maintain.
->-As a Manager, I need to add new engineers to our system when they are hired.
->-As a Manager, I need to be able to add new sites to a specific engineer.
->-As a Manager, I need to be able to update an engineer's details.
->-As a Manager, I need to be able to update a site's details.
->-As a Manager, I need to be able to delete an engineer if they're no longer employed
-here.
->-As a Manager, I need to be able to delete a site if it is decommissioned.
-
+>- As a Manager, I need to be able to see a list of all our engineers.
+>- As a Manager, I need to be able to select an engineer, see their details, and see a list of all the sites that they maintain.
+>- As a Manager, I need to add new engineers to our system when they are hired.
+>- As a Manager, I need to be able to add new sites to a specific engineer.
+>- As a Manager, I need to be able to update an engineer's details.
+>- As a Manager, I need to be able to update a site's details.
+>- As a Manager, I need to be able to delete an engineer if they're no longer employed here.
+>- As a Manager, I need to be able to delete a site if it is decommissioned.
 
 
 ## Technologies Used

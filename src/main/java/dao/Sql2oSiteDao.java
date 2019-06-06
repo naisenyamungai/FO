@@ -1,5 +1,6 @@
 package dao;
 import models.Site;
+import models.DB;
 import org.sql2o.*;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class Sql2oSiteDao implements SiteDao{
     public void add(Site site) {
         String sql = "INSERT INTO sites (site_name, site_id, node_name, technology, status, engineerId) VALUES (:site_name, :site_id, :node_name, :technology, :status, :engineerId" +
                 ")"; //raw sql
-        try(Connection con = sql2o.open()){ //try to open a connection
+        try(Connection con = DB.sql2o.open()){ //try to open a connection
             int id = (int) con.createQuery(sql, true) //make a new variable
                     .bind(site) //map my argument onto the query so we can use information from it
                     .executeUpdate() //run it all
@@ -27,7 +28,7 @@ public class Sql2oSiteDao implements SiteDao{
 
      @Override
         public List<Site> getAll() {
-            try(Connection con = sql2o.open()){
+            try(Connection con = DB.sql2o.open()){
                 return con.createQuery("SELECT * FROM sites") //raw sql
                         .executeAndFetch(Site.class); //fetch a list
             }
@@ -36,7 +37,7 @@ public class Sql2oSiteDao implements SiteDao{
 
      @Override
             public Site findById(int id) {
-                try(Connection con = sql2o.open()){
+                try(Connection con = DB.sql2o.open()){
                     return con.createQuery("SELECT * FROM sites WHERE id = :id")
                             .addParameter("id", id) //key/value pair, key must match above
                             .executeAndFetchFirst(Site.class); //fetch an individual item
@@ -46,7 +47,7 @@ public class Sql2oSiteDao implements SiteDao{
      @Override
          public void update(int id, String newSite_name, String status){
              String sql = "UPDATE sites SET site_name = :name WHERE id=:id";
-             try(Connection con = sql2o.open()){
+             try(Connection con = DB.sql2o.open()){
                  con.createQuery(sql)
                          .addParameter("site_name", newSite_name)
                          .addParameter("id", id)
@@ -59,7 +60,7 @@ public class Sql2oSiteDao implements SiteDao{
      @Override
         public void deleteById(int id) {
             String sql = "DELETE from sites WHERE id=:id";
-            try (Connection con = sql2o.open()) {
+            try (Connection con = DB.sql2o.open()) {
                 con.createQuery(sql)
                         .addParameter("id", id)
                         .executeUpdate();
@@ -71,7 +72,7 @@ public class Sql2oSiteDao implements SiteDao{
      @Override
         public void clearAllSites() {
             String sql = "DELETE from sites";
-            try (Connection con = sql2o.open()) {
+            try (Connection con = DB.sql2o.open()) {
                 con.createQuery(sql)
                         .executeUpdate();
             } catch (Sql2oException ex){

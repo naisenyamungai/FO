@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import dao.Sql2oEngineerDao;
 import dao.Sql2oSiteDao;
+import models.DB;
 import models.Engineer;
 import models.Site;
 
@@ -26,8 +27,8 @@ public class App{
 
 
         staticFileLocation("/public");
-        Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/site_maintenance", null, null);
-//        Sql2o sql2o = new Sql2o(connectionString, "", "");
+//        Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/site_maintenance", null, null);
+        Sql2o sql2o = DB.sql2o;
         Sql2oEngineerDao engineerDao = new Sql2oEngineerDao(sql2o);
         Sql2oSiteDao siteDao = new Sql2oSiteDao(sql2o);
 
